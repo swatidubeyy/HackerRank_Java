@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+      Scanner scn = new Scanner(System.in);
+      ArrayList[] list= new ArrayList[200010];
+      int n = scn.nextInt();
+      for(int i= 1 ; i <= n ; i++)
+      {
+        list[i] = new ArrayList();
+        int x = scn.nextInt();
+
+        for(int j = 1 ; j <= x ; j++)
+        {
+          int value = scn.nextInt();
+          list[i].add(value);
+
+        }
+      }
+      int q = scn.nextInt();
+
+      for(int i = 1 ; i <= q ; i++)
+      {
+              int x , y;
+              x = scn.nextInt();
+              y = scn.nextInt();
+              try
+              {
+                System.out.println(list[x].get(y-1));
+                
+              }catch(Exception e)
+              {
+                  System.out.println("ERROR!");
+              }
+      }
+    }
+}
+                        
